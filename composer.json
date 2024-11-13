@@ -1,0 +1,11 @@
+{
+  "require": {
+    "eliaslazcano/helpers": "^1.2",
+    "ext-zip": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

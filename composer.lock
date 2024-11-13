@@ -1,0 +1,124 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "f78f66b0e4d1b16177b1e479d03604e3",
+    "packages": [
+        {
+            "name": "eliaslazcano/helpers",
+            "version": "1.2.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eliaslazcano/php-utils.git",
+                "reference": "81fc91216cfcb35a4cbb2a3df2cd16002a89814f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eliaslazcano/php-utils/zipball/81fc91216cfcb35a4cbb2a3df2cd16002a89814f",
+                "reference": "81fc91216cfcb35a4cbb2a3df2cd16002a89814f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-gd": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "gumlet/php-image-resize": "^2.0",
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Eliaslazcano\\Helpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elias Lazcano Castro Neto",
+                    "email": "elias304162@gmail.com"
+                }
+            ],
+            "description": "Biblioteca de helpers para simplificar comandos rotineiros do PHP",
+            "support": {
+                "issues": "https://github.com/eliaslazcano/php-utils/issues",
+                "source": "https://github.com/eliaslazcano/php-utils/tree/v1.2.16"
+            },
+            "time": "2024-04-03T01:36:24+00:00"
+        },
+        {
+            "name": "gumlet/php-image-resize",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gumlet/php-image-resize.git",
+                "reference": "54165d97ebc3d4fc188761166b78e6702f605f59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gumlet/php-image-resize/zipball/54165d97ebc3d4fc188761166b78e6702f605f59",
+                "reference": "54165d97ebc3d4fc188761166b78e6702f605f59",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-gd": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "^4.1",
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^8.5"
+            },
+            "suggest": {
+                "ext-exif": "Auto-rotate jpeg files"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gumlet\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aditya Patadia",
+                    "homepage": "http://aditya.patadia.org/"
+                }
+            ],
+            "description": "PHP class to re-size and scale images",
+            "homepage": "https://github.com/gumlet/php-image-resize",
+            "keywords": [
+                "image",
+                "php",
+                "resize",
+                "scale"
+            ],
+            "support": {
+                "issues": "https://github.com/gumlet/php-image-resize/issues",
+                "source": "https://github.com/gumlet/php-image-resize/tree/2.0.4"
+            },
+            "time": "2023-10-11T14:16:03+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

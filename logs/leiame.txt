@@ -1,0 +1,1 @@
+este diretorio armazena o historico de erros emitidos pelo PHP
