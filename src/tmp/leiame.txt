@@ -1,0 +1,1 @@
+Aqui ficam os arquivos provisorios que sao comprimidos antes devolver ao cliente
