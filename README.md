@@ -8,6 +8,12 @@ Para comprimir e unificar arquivos PDF
 | /assinaturas | Retorna em array a informacao das assinaturas de todos os arquivos enviados |
 | /unir        | Unifica todos os arquivos e imagens em um unico PDF                         |
 
+## Construir imagem
+
+```bash
+docker build --pull --rm -t eliaslazcano/pdfapi:2.0 .
+```
+
 ## Tecnologias utilizadas
 
 ### QPDF
