@@ -7,6 +7,7 @@ Endpoints da API:
 | /comprimir   | Comprime todos os arquivos enivados, se forem varios, retorna em zip        |
 | /assinaturas | Retorna em array a informacao das assinaturas de todos os arquivos enviados |
 | /unificar    | Unifica todos os arquivos enviados em um unico PDF                          |
+| /imagem      | Converte uma ou mais imagens em arquivo PDF. Retorna zip se forem varias.   |
 
 ## Construir imagem
 
