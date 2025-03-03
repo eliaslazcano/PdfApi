@@ -10,10 +10,10 @@ class PdfUtils
 
   /**
    * Comprime um arquivo PDF usando o Ghostscript.
-   * @param string $pathOrigem - Caminho até o arquivo original.
-   * @param string $pathSaida - Caminho até o arquivo resultante.
-   * @param string $qualidade - Qualidade das imagens no documento, ajustando o DPI.
-   * @return bool - Sucesso ao criar o arquivo.
+   * @param string $pathOrigem Caminho até o arquivo original.
+   * @param string $pathSaida Caminho até o arquivo resultante.
+   * @param string $qualidade Qualidade das imagens no documento, ajustando o DPI.
+   * @return bool Sucesso ao criar o arquivo.
    */
   public static function compressaoGhostscript(string $pathOrigem, string $pathSaida, string $qualidade = self::GHOSTSCRIPT_QUALIDADE_DPI150): bool
   {
@@ -24,9 +24,9 @@ class PdfUtils
 
   /**
    * Comprime um arquivo PDF usando o QPDF.
-   * @param string $pathOrigem - Caminho até o arquivo original.
-   * @param string $pathSaida - Caminho até o arquivo resultante.
-   * @return bool - Sucesso ao criar o arquivo.
+   * @param string $pathOrigem Caminho até o arquivo original.
+   * @param string $pathSaida Caminho até o arquivo resultante.
+   * @return bool Sucesso ao criar o arquivo.
    */
   public static function compressaoQpdf(string $pathOrigem, string $pathSaida): bool
   {
@@ -47,6 +47,19 @@ class PdfUtils
     $filenames = implode(" ", $filenames);
     $comandoMontado = "$comandoInicio $filenames -- $pathSaida";
     shell_exec($comandoMontado);
+    return file_exists($pathSaida);
+  }
+
+  /**
+   * Converte uma imagem (jpg) para PDF.
+   * @param string $pathOrigem Caminho até o arquivo original.
+   * @param string $pathSaida Caminho até o arquivo resultante.
+   * @return bool Sucesso ao criar o arquivo.
+   */
+  public static function converterImagem(string $pathOrigem, string $pathSaida): bool
+  {
+    $comando = "gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=$pathSaida $pathOrigem";
+    shell_exec($comando);
     return file_exists($pathSaida);
   }
 }
