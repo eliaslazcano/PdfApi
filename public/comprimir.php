@@ -1,18 +1,19 @@
 <?php
 /**
- * Realiza a compressão do arquivo upado, só pode funcionar com 1 arquivo de cada vez.
+ * Realiza a compressão dos arquivos upados, se enviar multiplas o retorno será Zip.
+ * Por padrão realiza a compressão usando o Ghostscript que altera o DPI das imagens, mas se o documento houver
+ * assinaturas, a compressão é realizada com QPDF (comprime apenas headers).
  *
- * Você pode informar o parametro 'compatibilidade' = 1 para forçar o uso do motor QPDF para evitar adulterar o documento,
- * dessa forma somente os headers do arquivo PDF serão comprimidor por algoritmo de texto.
+ * Você pode informar o parametro 'compatibilidade' = 1 para forçar o uso do motor QPDF por padrão.
  */
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+use App\AssinaturaUtils;
 use App\PdfUtils;
 use App\Utils;
-use App\AssinaturaUtils;
 use Eliaslazcano\Helpers\HttpHelper;
 
 HttpHelper::validarPost();

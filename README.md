@@ -1,12 +1,12 @@
 # PDF API
 
-Para comprimir e unificar arquivos PDF
+Endpoints da API:
 
 | Endpoint     | Descricao                                                                   |
 |--------------|-----------------------------------------------------------------------------|
 | /comprimir   | Comprime todos os arquivos enivados, se forem varios, retorna em zip        |
 | /assinaturas | Retorna em array a informacao das assinaturas de todos os arquivos enviados |
-| /unir        | Unifica todos os arquivos e imagens em um unico PDF                         |
+| /unificar    | Unifica todos os arquivos enviados em um unico PDF                          |
 
 ## Construir imagem
 

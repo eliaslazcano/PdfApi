@@ -34,4 +34,19 @@ class PdfUtils
     shell_exec($comando);
     return file_exists($pathSaida);
   }
+
+  /**
+   * Unifica varios documentos PDF em um só.
+   * @param array $filenames Caminho até os arquivos originais.
+   * @param string $pathSaida Caminho até o arquivo resultante.
+   * @return bool Sucesso ao criar o arquivo.
+   */
+  public static function unificarQpdf(array $filenames, string $pathSaida): bool
+  {
+    $comandoInicio = "qpdf --empty --pages";
+    $filenames = implode(" ", $filenames);
+    $comandoMontado = "$comandoInicio $filenames -- $pathSaida";
+    shell_exec($comandoMontado);
+    return file_exists($pathSaida);
+  }
 }
